@@ -13,8 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('inicio');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('agregar',function(){
+    return view('agregar');
+})->name('agregar');

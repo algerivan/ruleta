@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                      <a id="navInicio" class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                      <a id="navInicio" class="nav-link" href="{{ route('inicio') }}">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a id="navGirar" class="nav-link" href="#">Girar</a>
@@ -33,7 +33,7 @@
                         Opciones
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Agregar</a>
+                        <a class="dropdown-item" href="{{ route('agregar') }}">Agregar</a>
                         <a class="dropdown-item" href="#">Editar</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Eliminar</a>
