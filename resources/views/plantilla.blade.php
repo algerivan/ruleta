@@ -11,7 +11,39 @@
     <title>Ruleta</title>
   </head>
   <body>
-      <h1>Alo</h1>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark px-5 sticky-top">
+                <a class="navbar-brand" href="#">
+                <img src="imagenes/ruleta.svg" width="30" height="30">
+                    Ruleta
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a id="navInicio" class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a id="navGirar" class="nav-link" href="#">Girar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Opciones
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Agregar</a>
+                        <a class="dropdown-item" href="#">Editar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Eliminar</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <button class="btn btn-outline-light mr-2">LogIn</button>
+                  <button class="btn btn-outline-light">SignUp</button>
+                </div>
+              </nav>
       <section class="container">
           @yield('seccion')
       </section>
