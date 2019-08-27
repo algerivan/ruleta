@@ -10,7 +10,7 @@
 
     <title>Ruleta</title>
   </head>
-  <body>
+  <body style="background-image: url(imagenes/fondoazul.jpg)">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark px-5 sticky-top">
                 <a class="navbar-brand" href="#">
                 <img src="imagenes/ruleta.svg" width="30" height="30">
@@ -44,7 +44,7 @@
                   <button class="btn btn-outline-light">SignUp</button>
                 </div>
               </nav>
-      <section class="container">
+      <section class="container bg-light">
           @yield('seccion')
       </section>
     <!-- Optional JavaScript -->
