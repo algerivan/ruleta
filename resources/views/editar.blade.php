@@ -3,7 +3,7 @@
 @section('seccion')
 <h1 class="display-4">Modificar Opciones</h1>
 <section class="mb-5">
-    <table class="table table-striped text-center">
+    <table class="table table-striped text-center table-hover">
         <thead>
             <tr>
                 <th scope="col">#Id</th>
