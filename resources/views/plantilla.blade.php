@@ -34,7 +34,7 @@
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('agregar') }}">Agregar</a>
-                        <a class="dropdown-item" href="#">Editar</a>
+                        <a class="dropdown-item" href="{{ route('editar') }}">Editar</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Eliminar</a>
                       </div>

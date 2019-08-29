@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('agregar',function(){
     return view('agregar');
 })->name('agregar');
+
+Route::get('editar',function(){
+    return view('editar');
+})->name('editar');
