@@ -11,23 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('inicio');
+Route::get('/','PagesController@inicio')->name('inicio');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('agregar','PagesController@agregar')->name('agregar');
 
-Route::get('agregar',function(){
-    return view('agregar');
-})->name('agregar');
+Route::get('editar','PagesController@editar')->name('editar');
 
-Route::get('editar',function(){
-    return view('editar');
-})->name('editar');
-
-Route::get('modificar/{id?}',function($id = null){
-    $numero=$id;
-    return view('modificar',compact('numero','id'));
-})->where('id','[0-9]+');
+Route::get('modificar/{id?}','PagesController@modificar')->where('id','[0-9]+');
