@@ -14,36 +14,18 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($opciones as $item)
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>$10</td>
+                <th scope="row">{{$item->idOpcion}}</th>
+                <td>{{$item->nombre}}</td>
+                <td>{{$item->descripcion}}</td>
+                <td>${{$item->costo}}</td>
                 <td class="d-flex justify-content-center">
                     <button class="btn btn-warning mr-1">Editar</button>
                     <button class="btn btn-danger">Eliminar</button>
                 </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>$10</td>
-                <td class="d-flex justify-content-center">
-                    <button class="btn btn-warning mr-1">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>$10</td>
-                <td class="d-flex justify-content-center">
-                    <button class="btn btn-warning mr-1">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </section>

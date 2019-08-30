@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -15,7 +15,8 @@ class PagesController extends Controller
     }
     
     public function editar(){
-        return view('editar');
+        $opciones = App\Opcion::all();
+        return view('editar', compact('opciones'));
     }
     
     public function modificar($id = null){
