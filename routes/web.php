@@ -19,4 +19,4 @@ Route::get('agregar','PagesController@agregar')->name('agregar');
 
 Route::get('editar','PagesController@editar')->name('editar');
 
-Route::get('modificar/{id?}','PagesController@modificar')->where('id','[0-9]+');
+Route::get('modificar/{id?}','PagesController@modificar')->where('id','[0-9]+')->name('modificar');

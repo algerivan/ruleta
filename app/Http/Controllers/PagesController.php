@@ -19,8 +19,8 @@ class PagesController extends Controller
         return view('editar', compact('opciones'));
     }
     
-    public function modificar($id = null){
-        $numero=$id;
-        return view('modificar',compact('numero','id'));
+    public function modificar($id){
+        $opcion = App\Opcion::findOrFail($id);
+        return view('modificar',compact('opcion'));
     }
 }

@@ -16,13 +16,13 @@
         <tbody>
             @foreach($opciones as $item)
             <tr>
-                <th scope="row">{{$item->idOpcion}}</th>
+                <th scope="row">{{$item->id}}</th>
                 <td>{{$item->nombre}}</td>
                 <td>{{$item->descripcion}}</td>
                 <td>${{$item->costo}}</td>
                 <td class="d-flex justify-content-center">
-                    <button class="btn btn-warning mr-1">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>
+                    <a href="{{ route('modificar', $item) }}"><button class="btn btn-warning mr-1">Editar</button></a>
+                    <a href="#"><button class="btn btn-danger">Eliminar</button></a>
                 </td>
             </tr>
             @endforeach
