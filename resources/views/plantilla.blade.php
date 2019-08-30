@@ -10,10 +10,10 @@
 
     <title>Ruleta</title>
   </head>
-  <body style="background-image: url(imagenes/fondoazul.jpg)">
+  <body style="background-image: url(../imagenes/fondoazul.jpg)">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark px-5 sticky-top">
                 <a class="navbar-brand" href="#">
-                <img src="imagenes/ruleta.svg" width="30" height="30">
+                <img src="../imagenes/ruleta.svg" width="30" height="30">
                     Ruleta
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

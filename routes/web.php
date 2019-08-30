@@ -26,3 +26,8 @@ Route::get('agregar',function(){
 Route::get('editar',function(){
     return view('editar');
 })->name('editar');
+
+Route::get('modificar/{id?}',function($id = null){
+    $numero=$id;
+    return view('modificar',compact('numero','id'));
+})->where('id','[0-9]+');
