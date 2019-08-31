@@ -35,4 +35,15 @@ class PagesController extends Controller
         $opciones=App\Opcion::all();
         return back()->with('mensaje', 'Nota Agregada!');
     }
+
+    public function actualizar(Request $request, $id){
+        $opcionUpdate = App\Opcion::findOrFail($id);
+        $opcionUpdate->nombre=$request->nombreOpcion;
+        $opcionUpdate->costo=$request->costoOpcion;
+        $opcionUpdate->descripcion=$request->descripcionOpcion;
+
+        $opcionUpdate->save();
+
+        return back()->with('mensaje', 'Opcion Actualizada!');
+    }
 }

@@ -22,3 +22,5 @@ Route::get('editar','PagesController@editar')->name('editar');
 Route::get('modificar/{id?}','PagesController@modificar')->where('id','[0-9]+')->name('modificar');
 
 Route::post('agregaOpcion', 'PagesController@agregaOpcion')->name('opcion.crear');
+
+Route::put('actualizar/{id}','PagesController@actualizar')->name('opcion.update');

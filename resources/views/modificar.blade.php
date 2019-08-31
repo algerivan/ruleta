@@ -3,8 +3,18 @@
 @section('seccion')
 
 <h1 class="display-4">Modificar Opcion {{$opcion->id}}</h1>
+@if(session('mensaje'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+<strong>{{session('mensaje')}}</strong> Haz click <a href="{{route('editar')}}">aqui</a> para ver las opciones
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+@endif
 <hr>
-<form action="">
+<form action="{{route('opcion.update',$opcion->id)}}" method="POST">
+    @method('PUT')
+    @csrf
     <section class="row">
         <section class="col-12 col-md-6 form-group">
             <label for="nombreOpcion">Nombre</label>
