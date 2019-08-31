@@ -2,6 +2,14 @@
 
 @section('seccion')
 <h1 class="display-4">Agregar nueva opcion</h1>
+@if(session('mensaje'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+<strong>{{session('mensaje')}}</strong> Haz click <a href="{{route('editar')}}">aqui</a> para ver las opciones
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+@endif
 <hr>
 <form action="{{ route('opcion.crear') }}" method="POST">
     @csrf

@@ -33,6 +33,6 @@ class PagesController extends Controller
         $opcionNueva->save();
 
         $opciones=App\Opcion::all();
-        return view('editar', compact('opciones'));
+        return back()->with('mensaje', 'Nota Agregada!');
     }
 }
