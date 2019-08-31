@@ -24,3 +24,7 @@ Route::get('modificar/{id?}','PagesController@modificar')->where('id','[0-9]+')-
 Route::post('agregaOpcion', 'PagesController@agregaOpcion')->name('opcion.crear');
 
 Route::put('actualizar/{id}','PagesController@actualizar')->name('opcion.update');
+
+Route::delete('eliminar/{id}', 'PagesController@eliminar')->name('opcion.eliminar');
+
+Route::get('girar', 'PagesController@girar');

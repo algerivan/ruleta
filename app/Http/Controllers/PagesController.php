@@ -15,8 +15,15 @@ class PagesController extends Controller
     }
     
     public function editar(){
-        $opciones = App\Opcion::all();
+        $opciones = App\Opcion::paginate(8);
         return view('editar', compact('opciones'));
+    }
+
+    public function girar(){
+        $opciones = App\Opcion::all();
+        $tamaño = sizeof($opciones);
+        $random = rand(1,$tamaño);
+        return $opciones[$random-1]->nombre;
     }
     
     public function modificar($id){
@@ -45,5 +52,12 @@ class PagesController extends Controller
         $opcionUpdate->save();
 
         return back()->with('mensaje', 'Opcion Actualizada!');
+    }
+
+    public function eliminar($id){
+        $opcionEliminar = App\Opcion::findOrFail($id);
+        $opcionEliminar -> delete();
+
+        return back()->with('mensaje','Nota Eliminada!');
     }
 }

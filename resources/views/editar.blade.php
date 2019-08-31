@@ -3,7 +3,14 @@
 @section('seccion')
 <h1 class="display-4">Modificar Opciones</h1>
 
-
+@if(session('mensaje'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{session('mensaje')}}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+@endif
 
 <section class="mb-5">
     <table class="table table-striped text-center table-hover">
@@ -25,12 +32,19 @@
                 <td>${{$item->costo}}</td>
                 <td class="d-flex justify-content-center">
                     <a href="{{ route('modificar', $item) }}"><button class="btn btn-warning mr-1">Editar</button></a>
-                    <a href="#"><button class="btn btn-danger">Eliminar</button></a>
+                    <form action="{{route('opcion.eliminar', $item)}}" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-danger" type="submit">Eliminar</button>
+                    </form>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
+    {{$opciones->links()}}
 </section>
+
 <br>
+
 @endsection
