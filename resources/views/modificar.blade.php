@@ -6,22 +6,22 @@
 <hr>
 <form action="">
     <section class="row">
-        <section class="col-6 form-group">
+        <section class="col-12 col-md-6 form-group">
             <label for="nombreOpcion">Nombre</label>
-            <input name="nombreOpcion" type="text" class="form-control" value="{{$opcion->nombre}}">
+            <input name="nombreOpcion" type="text" class="form-control" value="{{$opcion->nombre}}" required>
         </section>
-        <section class="col-6 form-group">
+        <section class="col-12 col-md-6 form-group">
             <label for="costoOpcion">Costo</label>
-            <input name="costoOpcion" type="text" class="form-control" value="{{$opcion->costo}}">
+            <input name="costoOpcion" type="text" class="form-control" value="{{$opcion->costo}}" required>
         </section>
         <section class="col-12">
             <label for="descripcionOpcion">Descripcion</label>
-            <textarea type="text" name="descripcionOpcion" class="form-control" rows="5">{{$opcion->descripcion}}</textarea>
+            <textarea type="text" name="descripcionOpcion" class="form-control" rows="5" required>{{$opcion->descripcion}}</textarea>
         </section>
     </section>
     <section class="row">
         <section class="col-12 mt-3 mb-4">
-            <button class="btn btn-block btn-warning">Editar Opcion</button>
+            <button class="btn btn-block btn-warning" type="submit">Editar Opcion</button>
         </section>
     </section>
 </form>

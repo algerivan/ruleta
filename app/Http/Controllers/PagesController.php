@@ -23,4 +23,16 @@ class PagesController extends Controller
         $opcion = App\Opcion::findOrFail($id);
         return view('modificar',compact('opcion'));
     }
+
+    public function agregaOpcion(Request $request){
+        $opcionNueva=new App\Opcion;
+        $opcionNueva->nombre=$request->nombreOpcion;
+        $opcionNueva->costo=$request->costoOpcion;
+        $opcionNueva->descripcion=$request->descripcionOpcion;
+
+        $opcionNueva->save();
+
+        $opciones=App\Opcion::all();
+        return view('editar', compact('opciones'));
+    }
 }
