@@ -45,11 +45,10 @@
     <section id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <section class="card-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cine</li>
-          <li class="list-group-item">Sushi</li>
-          <li class="list-group-item">Pasear al Luzu :'c</li>
-          <li class="list-group-item">Coger</li>
-          <li class="list-group-item">Bailar</li>
+          @foreach($cuestan as $item)
+          <li class="list-group-item">{{ $item }}</li>
+          @endforeach
+          
         </ul>
       </section>
     </section>
@@ -68,9 +67,9 @@
     <section id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <section class="card-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Navegar</li>
-          <li class="list-group-item">Volar</li>
-          <li class="list-group-item">Hacer pipi</li>
+          @foreach($gratis as $item)
+        <li class="list-group-item">{{$item}}</li>
+          @endforeach
         </ul>
       </section>
     </section>

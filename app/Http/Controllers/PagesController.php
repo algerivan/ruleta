@@ -7,7 +7,16 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function inicio(){
-        return view('welcome');
+        $opciones = App\Opcion::all();
+        $largo = sizeof($opciones);
+        for($i=0;$i<$largo;$i++){
+            if(($opciones[$i]->costo)>50){
+                $cuestan[$i]=$opciones[$i]->nombre;
+            }else{
+                $gratis[$i]=$opciones[$i]->nombre;
+            }
+        }
+        return view('welcome', compact('gratis', 'cuestan'));
     }
     
     public function agregar(){
